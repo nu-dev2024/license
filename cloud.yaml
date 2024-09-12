@@ -1,0 +1,29 @@
+title: "Tune studio role"
+description: "Permissions to use Tune studio My cloud feature"
+stage: "ALPHA"
+includedPermissions:
+  - compute.disks.create
+  - compute.disks.get
+  - compute.disks.use
+  - compute.firewalls.create
+  - compute.firewalls.get
+  - compute.globalOperations.get
+  - compute.images.useReadOnly
+  - compute.instances.create
+  - compute.instances.delete
+  - compute.instances.get
+  - compute.instances.setMetadata
+  - compute.instances.setServiceAccount
+  - compute.instances.setTags
+  - compute.instances.start
+  - compute.instances.stop
+  - compute.networks.create
+  - compute.networks.get
+  - compute.networks.updatePolicy
+  - compute.subnetworks.use
+  - compute.subnetworks.useExternalIp
+  - compute.zoneOperations.get
+  - compute.zones.get
+  - iam.serviceAccounts.actAs
+  - resourcemanager.projects.get
+  
